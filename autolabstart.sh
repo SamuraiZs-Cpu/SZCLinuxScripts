@@ -8,7 +8,7 @@
 # debug
 #set -v
 
-# chatGPT bullshittery to make sure the data file is stored in the same directory of this bash script. Though I can understand how it works, it does not agree with my soul. oh well.
+#script_dir returns the file path of the script file itself
 
 # This will cause problems if the file is placed in bashrc.d/ because it will try to run the datafile as a command. 
 
@@ -70,3 +70,4 @@ grademe() {
 
 
 	
+
