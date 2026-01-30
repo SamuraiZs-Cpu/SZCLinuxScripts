@@ -3,7 +3,7 @@
 ### convenience scripts to start red hat labs.
 # l18 starts a lab 
 # l19 ends a lab
-# lg grades a lab
+# grademe grades a lab
 
 # debug
 #set -v
@@ -19,15 +19,15 @@ DATAFILE=$(<"$SCRIPT_DIR"/REDHATLAB_NAMESTR.txt)
 
 l18() {
 
-# is the provided argument "0"?
+# is the provided argument null?
 	if [ -z "$1" ]; then
 		echo 'needs an rhlab. ex: "l18 <redhat lab>"'
 		return 1
 	fi
 
-# ___main function___
-	#save our input to the data file using it's absolute file path
-	echo "$1" > "$SCRIPT_DIR"/REDHATLAB_NAMESTR.txt"
+# ___main_function___
+	#save our input to the data file using its absolute file path
+	echo "$1" > "$SCRIPT_DIR"/REDHATLAB_NAMESTR.txt""
 	echo "l18 to start labs. l19 to end them. grademe to grade labs. \nstoring $1"
 	lab start $1
 	# bonus features
@@ -66,6 +66,7 @@ grademe() {
 	
 	
 	
+
 
 
 	
