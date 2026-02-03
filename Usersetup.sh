@@ -7,7 +7,7 @@ servera="student@servera"
 serverb="student@serverb"
 
 # get username.txt 
-read -r "Enter your username ('A-z9-0_'): " username
+read -r -p "Enter your username ('A-z9-0_'): " username
 if [[ $username =~ ^[A-za-z9-0_]+$ ]]; then
 	echo "Hello, $nickname!"
 	echo $nickname > ~/.username.txt
@@ -23,5 +23,6 @@ scp ~/setupa.sh $servera:~
 scp ~/.username.txt $serverb:~
 scp ~/setupb.sh $serverb:~
 }
+
 
 sendsetupfiles
