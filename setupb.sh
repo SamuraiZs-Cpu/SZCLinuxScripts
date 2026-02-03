@@ -9,12 +9,13 @@ echo "Connecting to Server B" > newmotd)
 }
 
 #change user prompt value
-myusername=$(<"~/.username.txt")
+myusername=$(<".username.txt")
 changeps1(){
-echo 'PS1="\[\033[1m\][$myusername@srvB \W]$ \[\033[0m\]"'>>.bashrc;source .bashrc
-echo 'PS1="\[\033[1m\][$myusernameROOT@srvB \W]# \[\033[0m\]"'>>/root/.bashrc
+echo 'PS1="\[\033[1m\]['$myusername'@srvB \W]$ \[\033[0m\]"'>>.bashrc;source .bashrc
+echo 'PS1="\[\033[1m\]['$myusernameROOT'@srvB \W]# \[\033[0m\]"'>>/root/.bashrc
 }
 
 changemotd
 changeps1
+
 unset main changemotd
