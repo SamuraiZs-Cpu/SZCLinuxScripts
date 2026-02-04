@@ -18,5 +18,6 @@ echo 'PS1="\[\033[1m\]['$myusername'ROOT@srvB \W]# \[\033[0m\]"'>>/root/.bashrc
 changemotd
 changeps1
 
-unset main changemotd
+unset changeps1 changemotd
+
 
